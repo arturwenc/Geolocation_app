@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geo App</title>
+    <link href="../static/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Upload a file</h1>
+    <h3>should contain column called <em>address</em></h3>
+
+<form action="{{url_for('success_table')}}"method="POST" enctype="multipart/form-data">
+<input type="file" accept=".csv" name="file" />
+<button type="submit">Submit</button>
+
+</form>
+<div class="output">
+    {{text|safe}}
+    {% include btn ignore missing %}
+</div>
+<!-- {% include btn ignore missing%} -->
+</div>
+</body>
+</html>
