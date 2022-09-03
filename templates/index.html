@@ -18,9 +18,13 @@
 </form>
 <div class="output">
     {{text|safe}}
-    {% include btn ignore missing %}
+    {% if btn %}
+     {% include btn %}
+{% endif %}
 </div>
-<!-- {% include btn ignore missing%} -->
+{% if btn %}
+     {% include btn %}
+{% endif %}
 </div>
 </body>
 </html>
